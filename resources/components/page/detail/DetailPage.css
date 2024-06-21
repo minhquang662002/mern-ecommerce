@@ -14,7 +14,6 @@
     display: flex;
     max-width: 1150px;
     margin: 0 auto;
-    height: 600px;
     gap: 80px;
 }
 
@@ -76,8 +75,8 @@
     object-fit: cover;
 }
 
-.DetailPage__product--info {
-}
+/* .DetailPage__product--info {
+} */
 
 .DetailPage__product--title {
     margin: 0;
@@ -121,4 +120,109 @@
     cursor: pointer;
     color: aqua;
     transition: color 0.2s;
+}
+.categories:hover {
+    color: aqua;
+}
+.categories {
+    white-space: nowrap;
+}
+.thu {
+    height: 40px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+}
+.thu .QuickViewModal__color--outer {
+    border-radius: 50%;
+    height: 26px;
+    width: 26px;
+    cursor: pointer;
+}
+.thu2 {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+}
+.thu2 .QuickViewModal__size--button {
+    border-radius: 50%;
+    height: 26px;
+    width: 26px;
+}
+.thu2 .QuickViewModal__size--button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+.DetailPage__imageGallery {
+    max-width: 70px !important;
+}
+.DetailPage__image--displayed {
+    max-width: 520px !important;
+    min-width: 225px !important;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #00d2ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.glow-on-hover:active {
+    color: #fff
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00d2ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
